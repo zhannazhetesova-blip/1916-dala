@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101a25">
+<title>«Лай суға май бітпес қой өткенге» — ойын</title>
+<style>
+:root{--night:#f5f6ee;--panel:#fffef9;--ink:#1c3030;--muted:#5d7370;--lime:#d9ed94;--teal:#267d68;--line:#d6e2d8;--gold:#d98947}*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;background:radial-gradient(ellipse at 12% 4%,#e2efd4 0,transparent 35%),radial-gradient(ellipse at 90% 95%,#f4e7cf 0,transparent 31%),linear-gradient(145deg,#f7f7ef,#f0f5ec 60%,#fbf4e8)}button{font:inherit;color:inherit;cursor:pointer}.shell{width:min(900px,100%);margin:auto;padding:28px 22px 34px}.top{display:flex;align-items:center;justify-content:space-between;gap:14px}.title-wrap{display:flex;align-items:center;gap:14px}.mark{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;background:var(--lime);color:#17252b;font-size:24px}.eyebrow{margin:0 0 3px;color:var(--teal);font-weight:850;font-size:11px;letter-spacing:.14em;text-transform:uppercase}h1{margin:0;font-size:clamp(21px,4vw,34px);line-height:1.18;letter-spacing:-.025em}.music{border:1px solid var(--line);border-radius:999px;background:#fffef9;color:var(--ink);padding:9px 14px;font-weight:750;box-shadow:0 5px 18px #294c3210;white-space:nowrap}.instruction{margin:34px 0 20px;text-align:center}.instruction h2{margin:0;font-size:clamp(18px,3vw,23px)}.instruction p{margin:5px 0 0;color:var(--muted)}.board{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:650px;margin:0 auto}.number{position:relative;min-height:150px;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,#fffef9,#edf4e8);color:#267d68;font-weight:900;font-size:clamp(40px,7vw,62px);box-shadow:0 8px 22px #24453112;transition:transform .18s,border-color .18s,background .18s}.number:hover,.number:focus-visible{transform:translateY(-4px);border-color:var(--lime);background:linear-gradient(145deg,#f4f9e7,#e6f1e4);outline:none}.number.done{border-color:#5a8c7d;color:var(--teal)}.number.done:after{content:"✓";position:absolute;top:12px;right:15px;font-size:16px;color:var(--teal)}.foot{margin:21px auto 0;text-align:center;color:#8fa4a5;font-size:13px}.modal{position:fixed;inset:0;z-index:5;display:grid;place-items:center;padding:18px;background:#18353280;backdrop-filter:blur(8px)}.modal.hidden{display:none}.dialog{position:relative;width:min(700px,100%);padding:clamp(23px,5vw,42px);border:1px solid #58706e;border-radius:27px;background:radial-gradient(circle at 95% 0,#f0f5d9 0,transparent 35%),linear-gradient(145deg,#fffef9,#f0f5ec);box-shadow:0 25px 80px #213b2d30}.dialog-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.qnum{color:var(--teal);font-size:13px;font-weight:900;letter-spacing:.12em}.icon-btn{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#fffef9;color:var(--ink);font-size:19px}.question{margin:32px 0 25px;font-size:clamp(25px,5vw,39px);line-height:1.2;letter-spacing:-.025em}.answer{margin:0 0 23px;padding:15px 18px;border-left:4px solid var(--lime);border-radius:0 15px 15px 0;background:#edf4d8}.answer b{display:block;margin-bottom:5px;color:#267d68;font-size:12px;letter-spacing:.12em}.answer p{margin:0;font-size:clamp(18px,3vw,22px);font-weight:650}.actions{display:flex;flex-wrap:wrap;gap:10px}.primary,.secondary{border-radius:14px;padding:12px 17px;font-weight:850}.primary{border:0;background:var(--lime);color:#17242a}.primary:hover{background:#e7ff9a}.secondary{border:1px solid var(--line);background:#fffef9;color:var(--ink)}.secondary:hover{border-color:var(--teal)}.hidden{display:none!important}.toast{position:fixed;z-index:10;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;max-width:calc(100% - 32px);padding:10px 16px;border-radius:999px;background:var(--lime);color:#17242a;font-weight:800;text-align:center;transition:.22s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:620px){.shell{padding:20px 15px 28px}.number{min-height:120px;border-radius:20px}.board{gap:11px}.instruction{margin-top:28px}.mark{width:42px;height:42px;border-radius:14px}.music{padding:8px 10px;font-size:13px}}@media(max-width:390px){.top{align-items:flex-start}.title-wrap{gap:9px}.music{font-size:12px;padding:8px}.number{min-height:100px}.foot{font-size:12px}}
+</style>
+</head>
+<body>
+<main class="shell">
+ <header class="top">
+  <div class="title-wrap"><div class="mark" aria-hidden="true">♫</div><div><p class="eyebrow">Өлең бойынша ойын</p><h1>«Лай суға май бітпес қой өткенге»</h1></div></div>
+  <button class="music" id="musicBtn" type="button" aria-pressed="true">♫ Әуен қосулы</button>
+ </header>
+ <section class="instruction"><h2>Сұрақ нөмірін таңдаңыз</h2><p>Алдымен өз жауабыңызды ойланып айтыңыз.</p></section>
+ <section class="board" id="board" aria-label="Сұрақ нөмірлері"></section>
+ <p class="foot">Сұрақты ашу үшін нөмірді басыңыз</p>
+</main>
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="questionText">
+ <article class="dialog">
+  <div class="dialog-top"><span class="qnum" id="questionNumber">01-СҰРАҚ</span><button class="icon-btn" id="closeBtn" type="button" aria-label="Жабу">×</button></div>
+  <h2 class="question" id="questionText"></h2>
+  <div class="answer hidden" id="answerBox"><b>ҮЛГІ ЖАУАП</b><p id="answerText"></p></div>
+  <div class="actions"><button class="primary" id="revealBtn" type="button">Жауабын ашу ✨</button><button class="secondary hidden" id="nextBtn" type="button">Келесі сұрақ →</button></div>
+ </article>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const questions=[
+ {q:"Өлеңнің негізгі тақырыбы қандай?",a:"Адам өмірінің мәні, рухани ізденіс және ішкі толғаныс."},
+ {q:"Ақынның жалғыздық сезімі қай жолдан байқалады?",a:"«Көңілдің жайлауынан ел кеткен бе?»"},
+ {q:"«Қасқырша алақтап» тіркесі нені аңғартады?",a:"Ақынның жан тыныштығын таба алмаған мазасыз күйін аңғартады."},
+ {q:"«Тар соқпақ» бейнесі қандай мағына береді?",a:"Өмір жолының күрделі, қиындыққа толы екенін білдіреді."},
+ {q:"Өлеңнің соңында ақын адамды неге шақырады?",a:"«Құлап кетпе, тура шық, көзіңе бақ» — дұрыс жолдан таймауға шақырады."},
+ {q:"Өлеңнен өз өміріңізге қандай ой түйдіңіз?",a:"Үлгі: мақсат қойып, қиындыққа мойымай, ойланып әрекет ету."}
+];
+const $=id=>document.getElementById(id);let active=0;const completed=new Set();let musicOn=true,audio=null,master=null,beatTimer=null,beat=0;
+const board=$("board");questions.forEach((_,i)=>{const b=document.createElement("button");b.type="button";b.className="number";b.textContent=String(i+1);b.setAttribute("aria-label",`Сұрақ ${i+1}`);b.addEventListener("click",()=>openQuestion(i));board.appendChild(b)});
+function startMusic(){if(!musicOn||audio)return;try{audio=new(window.AudioContext||window.webkitAudioContext)();master=audio.createGain();master.gain.value=.12;master.connect(audio.destination);audio.resume();beat=0;beatTimer=setInterval(playBeat,430)}catch(e){audio=null}}
+function playTone(freq,dur,vol,wave="sine",delay=0){if(!audio||!musicOn)return;const now=audio.currentTime+delay,o=audio.createOscillator(),g=audio.createGain();o.type=wave;o.frequency.setValueAtTime(freq,now);g.gain.setValueAtTime(.001,now);g.gain.linearRampToValueAtTime(vol,now+.018);g.gain.exponentialRampToValueAtTime(.001,now+dur);o.connect(g);g.connect(master);o.start(now);o.stop(now+dur+.02)}
+function playBeat(){if(!audio||!musicOn)return;const melody=[293.66,369.99,440,369.99,329.63,440,493.88,440,293.66,369.99,440,554.37,493.88,440,369.99,329.63];playTone(melody[beat%melody.length],.34,.035,"triangle");if(beat%4===0)playTone(110,.23,.085,"sine");if(beat%4===2)playTone(164.81,.14,.045,"sine");if(beat%2===1)playTone(1900,.045,.008,"sine");beat++}
+function effect(freq=650){playTone(freq,.12,.07,"sine")}
+function openQuestion(i){startMusic();active=i;renderQuestion();$("modal").classList.remove("hidden");document.body.style.overflow="hidden";effect(520+i*28)}
+function closeQuestion(){$("modal").classList.add("hidden");document.body.style.overflow=""}
+function renderQuestion(){const item=questions[active],isDone=completed.has(active);$("questionNumber").textContent=String(active+1).padStart(2,"0")+"-СҰРАҚ";$("questionText").textContent=item.q;$("answerText").textContent=item.a;$("answerBox").classList.toggle("hidden",!isDone);$("revealBtn").classList.toggle("hidden",isDone);$("nextBtn").classList.toggle("hidden",!isDone);[...board.children].forEach((b,i)=>b.classList.toggle("done",completed.has(i)))}
+$("revealBtn").addEventListener("click",()=>{completed.add(active);renderQuestion();effect(790);if(completed.size===6)toast("Жарайсыз! Барлық сұраққа жауап бердіңіз! ✨")});
+$("nextBtn").addEventListener("click",()=>{active=(active+1)%questions.length;renderQuestion();effect(570)});
+$("closeBtn").addEventListener("click",closeQuestion);$("modal").addEventListener("click",e=>{if(e.target===$("modal"))closeQuestion()});document.addEventListener("keydown",e=>{if(e.key==="Escape")closeQuestion()});
+$("musicBtn").addEventListener("click",async()=>{musicOn=!musicOn;$("musicBtn").textContent=musicOn?"♫ Әуен қосулы":"♪ Әуен өшірулі";$("musicBtn").setAttribute("aria-pressed",String(musicOn));if(musicOn){if(!audio)startMusic();else{await audio.resume();master.gain.setTargetAtTime(.12,audio.currentTime,.08)}}else if(audio){master.gain.setTargetAtTime(.0001,audio.currentTime,.08)} });
+
+let toastTimer;function toast(text){const t=$("toast");t.textContent=text;t.classList.add("show");clearTimeout(toastTimer);toastTimer=setTimeout(()=>t.classList.remove("show"),2600)}
+</script>
+</body>
+</html>
